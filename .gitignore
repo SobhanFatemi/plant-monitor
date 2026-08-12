@@ -6,3 +6,4 @@ staticfiles/
 *.sqlite3
 .directory.directory
 ESP32_plant_monitor/ESP32_plant_monitor.ino
+plantmonitor_ESP32/plantmonitor_ESP32.ino
