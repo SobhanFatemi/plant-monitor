@@ -4,4 +4,4 @@ __pycache__/
 .env
 staticfiles/
 *.sqlite3
-.directory
+.directory.directory
