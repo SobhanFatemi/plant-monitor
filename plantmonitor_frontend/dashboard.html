@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Plant Monitor</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>
+      <i data-lucide="leaf" style="width: 28px; height: 28px; color: #4ade80;"></i>
+      Plant Monitor
+    </h1>
+    <a href="/history/" class="btn">
+      <i data-lucide="history" style="width: 18px; height: 18px;"></i>
+      Full History
+    </a>
+  </div>
+  <div class="current" id="current"></div>
+  <div id="alert"></div>
+  <div class="chart-container">
+    <canvas id="chart"></canvas>
+  </div>
+  <script src="{% static 'dashboard.js' %}"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
