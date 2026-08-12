@@ -13,6 +13,7 @@ client.connect(BROKER, PORT)
 while True:
     reading = {
         "moisture": round(random.uniform(20, 80), 1),
+        "raw_moisture": random.randint(200, 4095),
         "temperature": round(random.uniform(18, 26), 1),
         "humidity": round(random.uniform(30, 60), 1),
     }
