@@ -55,7 +55,7 @@ const int WET_VALUE = 200;
 // Wi-Fi
 // =====================================================
 
-const char* WIFI_SSID = "Beef";
+const char* WIFI_SSID = "YOUR_WIFI_SSID";
 const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
 
 // =====================================================
