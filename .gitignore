@@ -5,5 +5,5 @@ __pycache__/
 staticfiles/
 *.sqlite3
 .directory.directory
-plantmonitor_ESP32/plantmonitor_ESP32_local.ino
+plantmonitor_ESP32_local/
 *.ino.local
