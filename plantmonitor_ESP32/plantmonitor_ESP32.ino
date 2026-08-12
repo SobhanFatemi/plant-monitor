@@ -66,7 +66,7 @@ const char* MQTT_SERVER = "87.248.155.166";
 const int MQTT_PORT = 1883;
 
 const char* MQTT_USER = "django";
-const char* MQTT_PASS = "your-new-mqtt-password";
+const char* MQTT_PASS = "Bee811024";
 
 const char* MQTT_TOPIC = "plant/1/reading";
 
