@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plant Monitor - Full History</title>
   <link rel="stylesheet" href="{% static 'style.css' %}">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
 </head>
 <body>
   <div class="navbar">
@@ -21,10 +21,47 @@
     </a>
   </div>
 
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label for="fromInput">From</label>
+      <input type="datetime-local" id="fromInput">
+    </div>
+    <div class="filter-group">
+      <label for="toInput">To</label>
+      <input type="datetime-local" id="toInput">
+    </div>
+    <button class="btn" id="applyFilter">
+      <i data-lucide="filter" style="width: 16px; height: 16px;"></i> Apply
+    </button>
+    <button class="btn btn-secondary" id="resetFilter">
+      <i data-lucide="rotate-ccw" style="width: 16px; height: 16px;"></i> Reset
+    </button>
+  </div>
+
   <p id="count" class="subtle"></p>
 
-  <div class="chart-container">
-    <canvas id="historyChart"></canvas>
+  <div class="charts-wrap">
+    <div class="chart-container"><canvas id="chartMoisture"></canvas></div>
+    <div class="chart-container"><canvas id="chartTemperature"></canvas></div>
+    <div class="chart-container"><canvas id="chartHumidity"></canvas></div>
+  </div>
+
+  <div class="compare-section">
+    <h2><i data-lucide="git-compare"></i> Compare Two Days</h2>
+    <div class="compare-inputs">
+      <div class="filter-group">
+        <label for="dayA">Day A</label>
+        <input type="date" id="dayA">
+      </div>
+      <div class="filter-group">
+        <label for="dayB">Day B</label>
+        <input type="date" id="dayB">
+      </div>
+      <button class="btn" id="compareBtn">
+        <i data-lucide="bar-chart-3" style="width: 16px; height: 16px;"></i> Compare
+      </button>
+    </div>
+    <div id="compareResult"></div>
   </div>
 
   <div class="table-wrap">
